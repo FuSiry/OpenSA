@@ -25,7 +25,12 @@ Aiming at the common training datsets split, spectrum preprocessing, wavelength 
 <hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
 
 
-<font  size=5 color=bule >本篇针对OpenSA的光谱预处理模块进行代码开源和使用示意。
+<font  size=5 color=bule >本篇针对OpenSA的光谱预处理模块进行代码开源和使用示意
+# 更新日志 20220521
+给OpenSA完善了一下
+1、在波长筛选算法中，加入了遗传算法GA
+2、在定量分析算法中，加入ELM，普通卷积神经网络
+以及复现了一区文章的网络DeepSpectra，和二区文章的网络1-D ALENET                                                                      
 
 # 一、光谱数据读入
 提供两个开源数据作为实列，一个为公开定量分析数据集，一个为公开定性分析数据集，本章仅以公开定量分析数据集作为演示。
