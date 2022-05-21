@@ -26,8 +26,8 @@ def ModelRgsevaluate(y_pred, y_true):
 def ModelRgsevaluatePro(y_pred, y_true, yscale):
 
     yscaler = yscale
-    y_true = yscaler.inverse_transform(y_true).reshape(1, -1)
-    y_pred = yscaler.inverse_transform(y_pred).reshape(1, -1)
+    y_true = yscaler.inverse_transform(y_true)
+    y_pred = yscaler.inverse_transform(y_pred)
 
     mse = mean_squared_error(y_true,y_pred)
     R2  = r2_score(y_true,y_pred)

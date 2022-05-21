@@ -22,7 +22,7 @@ from sklearn.preprocessing import scale,MinMaxScaler,Normalizer,StandardScaler
 import time
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-torch.cuda.set_device(0)
+
 
 
 
@@ -101,6 +101,20 @@ class CNN3Lyaers(nn.Module):
         out = self.fc(x)
         out = F.softmax(out,dim=1)
         return out
+
+class mlpmodel(nn.Module):
+    def __init__(self, inputdim, outputdim):
+        super(mlpmodel, self).__init__()
+        self.fc1 = nn.Linear(inputdim, inputdim//2)
+        self.fc2= nn.Linear(inputdim//2, inputdim // 4)
+        self.fc3 = nn.Linear(inputdim//4, outputdim)
+    def forward(self, x):
+        x = self.fc1(x)
+        x = self.fc2(x)
+        x = self.fc3(x)
+        # x = F.softmax(x, dim=1)
+        return x
+
 
 def CNNTrain(X_train, X_test,y_train,y_test, BATCH_SIZE, n_epochs, nls):
 

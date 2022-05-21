@@ -14,7 +14,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import MinMaxScaler, StandardScaler
 from copy import deepcopy
 import pandas as pd
-import pywt
+#import pywt
 
 # ref1: 湖南示范大学同学实列，并做了部分修改
 # ref2: https://blog.csdn.net/qq2512446791

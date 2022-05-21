@@ -1,6 +1,8 @@
 
 from sklearn.cross_decomposition import PLSRegression
 from sklearn.neural_network import MLPRegressor
+# import hpelm
+
 """
     -*- coding: utf-8 -*-
     @Time   :2022/04/12 17:10
@@ -55,6 +57,20 @@ def Anngression(X_train, X_test, y_train, y_test):
 
     # predict the values
     y_pred = model.predict(X_test)
+    Rmse, R2, Mae = ModelRgsevaluate(y_pred, y_test)
+
+    return Rmse, R2, Mae
+
+def ELM(X_train, X_test, y_train, y_test):
+
+    model = hpelm.ELM(X_train.shape[1], 1)
+    model.add_neurons(20, 'sigm')
+
+
+    model.train(X_train, y_train, 'r')
+    y_pred = model.predict(X_test)
+
+
     Rmse, R2, Mae = ModelRgsevaluate(y_pred, y_test)
 
     return Rmse, R2, Mae

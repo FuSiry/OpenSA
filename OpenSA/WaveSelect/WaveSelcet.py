@@ -14,6 +14,7 @@ from WaveSelect.Spa import SPA
 from WaveSelect.Uve import UVE
 from WaveSelect.Cars import CARS_Cloud
 from WaveSelect.Pca import Pca
+from WaveSelect.GA import GA
 from sklearn.model_selection import train_test_split
 
 def SpctrumFeatureSelcet(method, X, y):
@@ -42,6 +43,9 @@ def SpctrumFeatureSelcet(method, X, y):
         Xcal, Xval, ycal, yval = train_test_split(X, y, test_size=0.2)
         Featuresecletidx = SPA().spa(
             Xcal= Xcal, ycal=ycal, m_min=8, m_max=50, Xval=Xval, yval=yval, autoscaling=1)
+        X_Feature = X[:, Featuresecletidx]
+    elif method == "GA":
+        Featuresecletidx = GA(X, y, 10)
         X_Feature = X[:, Featuresecletidx]
     elif method == "Pca":
         X_Feature = Pca(X)

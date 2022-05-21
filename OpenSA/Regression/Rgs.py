@@ -9,7 +9,8 @@
 
 """
 
-from Regression.ClassicRgs import Pls, Anngression, Svregression
+from Regression.ClassicRgs import Pls, Anngression, Svregression, ELM
+from Regression.CNN import CNNTrain
 
 def  QuantitativeAnalysis(model, X_train, X_test, y_train, y_test):
 
@@ -19,6 +20,10 @@ def  QuantitativeAnalysis(model, X_train, X_test, y_train, y_test):
         Rmse, R2, Mae = Anngression(X_train, X_test, y_train, y_test)
     elif model == "SVR":
         Rmse, R2, Mae = Svregression(X_train, X_test, y_train, y_test)
+    elif model == "ELM":
+        Rmse, R2, Mae = ELM(X_train, X_test, y_train, y_test)
+    elif model == "CNN":
+        Rmse, R2, Mae = CNNTrain("AlexNet",X_train, X_test, y_train, y_test,  150)
     else:
         print("no this model of QuantitativeAnalysis")
 
