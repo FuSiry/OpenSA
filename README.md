@@ -4,7 +4,8 @@ Aiming at the common training datsets split, spectrum preprocessing, wavelength 
 <font size =4 color=Red>“光晰本质，谱见不同”，光谱作为物质的指纹，被广泛应用于成分分析中。伴随微型光谱仪/光谱成像仪的发展与普及，基于光谱的分析技术将不只停留于工业和实验室，即将走入生活，实现万物感知，见微知著。本系列文章致力于光谱分析技术的科普和应用。
 <hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
 
-![微信图片_20220512190228](https://user-images.githubusercontent.com/56440282/168059126-0879e3e5-2a10-4983-8c4f-b6d06ba07b6b.jpg)
+
+![微信图片_20220522163336](https://user-images.githubusercontent.com/56440282/169686130-a8643a3d-4895-4620-8b8a-4e344a29f7dc.jpg)
 
 
 @[TOC](文章目录)
